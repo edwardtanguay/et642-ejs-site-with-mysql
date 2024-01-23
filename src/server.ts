@@ -18,17 +18,10 @@ app.get('/welcome', (req, res) => {
 	res.render('pages/welcome');
 });
 
-app.get('/books', async (req, res) => {
-	res.render('pages/books', { books: await model.getBooks() });
+app.get('/employees', async (req, res) => {
+	res.render('pages/employees', { employees: await model.getEmployees() });
 });
-
-app.get('/book/:idCode', async (req, res) => {
-	const idCode = req.params.idCode;
-	const books = await model.getBooks();
-	const book = books.find(m => m.idCode === idCode);
-	res.render('pages/book', { book });
-});
-
+	
 app.get('/about', (req, res) => {
 	res.render('pages/about', {});
 });

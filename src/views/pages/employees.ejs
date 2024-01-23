@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <%- include('../partials/htmlHead') %>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Info Site</title>
+</head>
+    
+<body>
+    <%- include('../partials/header') %>
+    <%- include('../partials/menu', {pageIdCode: 'employees'})%>
+    <div>
+        <p>There are
+            <%= employees.length %> employees.
+        </p>
+        <div class="employees">
+            <% employees.forEach((employee) => { %>
+                <div class="employee">
+                    <p class="name"><%=employee.first_name%> <%=employee.last_name%></p>
+                    <p class="job_title"><%=employee.job_title%></p>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</body>
+    
+</html>

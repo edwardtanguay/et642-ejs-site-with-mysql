@@ -1,6 +1,6 @@
-export interface IBook {
-	idCode: string;
-	title: string;
-	description: string;
-	buyUrl: string;
-}
+    export interface IEmployee {
+        id: number;
+        first_name: string;
+        last_name: string;
+        job_title: string;
+    }

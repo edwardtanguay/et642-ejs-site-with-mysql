@@ -1,21 +1,26 @@
-import axios from 'axios';
-import { IBook } from './interfaces';
-
-export const getBooks = () => {
-	const bookUrl = 'https://edwardtanguay.vercel.app/share/books.json';
-	return new Promise<IBook[]>(async (resolve, reject) => {
-		const response = await axios.get(bookUrl);
-		const rawBooks = response.data;
-		const books: IBook[] = [];
-		for (const rawBook of rawBooks) {
-			const book:IBook = {
-				idCode: rawBook.idcode,
-				title: rawBook.title,
-				description: rawBook.description,
-				buyUrl: rawBook.buyurl
-			}
-			books.push(book);
-		}
-		resolve(books);
-	})
-}
+    import { IEmployee } from './interfaces';
+     
+    export const getEmployees = () => {
+        return new Promise<IEmployee[]>(async (resolve, reject) => {
+            resolve([
+                {
+                    id: 1,
+                    first_name: 'first1',
+                    last_name: 'last1',
+                    job_title: 'title1'
+                },
+                {
+                    id: 2,
+                    first_name: 'first2',
+                    last_name: 'last2',
+                    job_title: 'title2'
+                },
+                {
+                    id: 3,
+                    first_name: 'first3',
+                    last_name: 'last3',
+                    job_title: 'title3'
+                }
+            ])
+        })
+    }
