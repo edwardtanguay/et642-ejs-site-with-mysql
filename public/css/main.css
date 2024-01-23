@@ -27,3 +27,18 @@ nav a.active {
 	padding: 1rem;
 	border-radius: .3rem;
 }
+
+.employee {
+	margin-bottom: 1rem;
+}
+	
+.employee .name {
+	font-size: 1.2rem;
+	margin: 0;
+	font-weight: bold;
+}
+	
+.employee .job_title {
+	font-style: italic;
+	margin: 0;
+}
