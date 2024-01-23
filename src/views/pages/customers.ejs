@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <%- include('../partials/htmlHead') %>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Info Site</title>
+</head>
+    
+<body>
+    <%- include('../partials/header') %>
+    <%- include('../partials/menu', {pageIdCode: 'customers'})%>
+    <div>
+        <p>There are <%= customers.length %> customers.</p>
+        <div class="customers">
+            <% customers.forEach((customer) => { %>
+                <p><%=customer.company_name%> has <%=customer.number_of_orders%> orders.</p>
+            <% }) %>
+        </div>
+    </div>
+</body>
+    
+</html>

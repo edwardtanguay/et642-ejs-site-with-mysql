@@ -21,6 +21,10 @@ app.get('/welcome', (req, res) => {
 app.get('/employees', async (req, res) => {
 	res.render('pages/employees', { employees: await model.getEmployees() });
 });
+ 
+    app.get('/customers', async (req, res) => {
+        res.render('pages/customers', { customers: await model.getCustomers() });
+    });
 	
 app.get('/about', (req, res) => {
 	res.render('pages/about', {});
