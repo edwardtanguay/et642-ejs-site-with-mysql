@@ -15,12 +15,15 @@
             <%= employees.length %> employees.
         </p>
         <div class="employees">
-            <% employees.forEach((employee) => { %>
-                <div class="employee">
-                    <p class="name"><%=employee.first_name%> <%=employee.last_name%></p>
-                    <p class="job_title"><%=employee.job_title%></p>
-                </div>
-            <% }) %>
+			<% employees.forEach((employee) => { %>
+				<div class="employee">
+					<img src="images/employees/employee_<%=employee.id%>.jpg"/>
+					<div class="info">
+						<p class="name"><%=employee.first_name%> <%=employee.last_name%></p>
+						<p class="job_title"><%=employee.job_title%></p>
+					</div>
+				</div>
+			<% }) %>
         </div>
     </div>
 </body>

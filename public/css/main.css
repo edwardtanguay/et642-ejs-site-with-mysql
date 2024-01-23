@@ -42,3 +42,14 @@ nav a.active {
 	font-style: italic;
 	margin: 0;
 }
+
+.employee {
+	margin-bottom: 1rem;
+	display: flex;
+	gap: 1rem;
+}
+	
+.employee img {
+	width: 5rem;
+	border-radius: .5rem;
+}
